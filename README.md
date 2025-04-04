@@ -2,6 +2,8 @@
 
 > Docker-Image based on Ubuntu-Linux for creating LaTeX documents e.g. within a CI/CD pipeline
 
+[![Publish Docker Image](https://github.com/IamPhytan/latex-devcontainer/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/IamPhytan/latex-devcontainer/actions/workflows/docker-image.yml)
+
 ## In General
 
 LaTeX is a language to typeset documents. One of its main features is that the original document is just a plain text file which can be edited with any text editor. This enables us to have these text files under a version control system like Git. You can easily go back to a previous version with the help of the version control system. Additionally, build pipelines came up. There are some services available on the Internet which even give you free build minutes in their pipeline implementation. So, this LaTeX-Docker-images uses these pipelines to enable an auto-generation of the outcoming PDF file with every check-in to the repository.
