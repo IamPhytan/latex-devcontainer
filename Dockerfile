@@ -1,15 +1,16 @@
 # Use the latest Ubuntu devcontainer release
-FROM mcr.microsoft.com/devcontainers/base:noble
+ARG UBUNTU_VERSION=noble
+FROM mcr.microsoft.com/devcontainers/base:${UBUNTU_VERSION}
 
 # Get full LaTeX with texlive installed with the normal packaged apt-get installation process
 # After that the cache is purged to save image space
-RUN apt-get update && \
-    apt-get install -y lsb-release && \
-    apt-get install -y curl && \
-    apt-get install -y tzdata && \
-    apt-get install -y texlive-full && \
-    apt-get install -y inkscape && \
-    apt-get install -y make && \
+RUN apt-get update && apt-get -y install \
+    lsb-release \
+    curl \
+    tzdata \
+    texlive-full \
+    inkscape \
+    make && \
     apt-get purge -y *-doc && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
