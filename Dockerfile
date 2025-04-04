@@ -1,5 +1,5 @@
 # Use the latest Ubuntu devcontainer release
-FROM mcr.microsoft.com/devcontainers/base:ubuntu
+FROM mcr.microsoft.com/devcontainers/base:noble
 
 # Get full LaTeX with texlive installed with the normal packaged apt-get installation process
 # After that the cache is purged to save image space
